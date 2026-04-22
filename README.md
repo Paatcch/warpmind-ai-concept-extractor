@@ -98,12 +98,11 @@ This project was developed as part of a learning process and has some known limi
 - Analysing and testing the UI with methods such as cognitive walkthrough, think-aloud study and the 10 Usability Heuristics by Jakob Nielsen
 
 If I were to extend this project, I would:
-
-Refactor the codebase into a more modular architecture with clearer separation between UI, logic, and API layers to limit coupling
-Add responsiveness and improve the visual design
-Replace the API with a modern LLM integration
-Improve state management and reduce global dependencies
-Enable user-uploaded PDFs
+- Refactor the codebase into a more modular architecture with clearer separation between UI, logic, and API layers to limit coupling
+- Add responsiveness and improve the visual design
+- Replace the API with a modern LLM integration
+- Improve state management and reduce global dependencies
+- Enable user-uploaded PDFs
 
 
 
