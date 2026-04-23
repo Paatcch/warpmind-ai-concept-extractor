@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>WarpMind</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://warp.cs.au.dk/libs/warpmind.js"></script>
+	</head>
+	<body>
+		<div class="folder" id="pdfFolder" data-min="-1385" data-max="-200">
+			<img src="Assets/Images/PDF_Folder_Drag.png" alt="pdf folder to drag">
+			<div id="pdfFolderDragActivationArea"></div>
+			<div id="topBar">
+				<button class="btn" id="prevPageBtn">
+					Previous Page
+				</button>
+				<button class="btn" id="nextPageBtn">
+					Next Page
+				</button>
+				<span class="pageInfo">
+					Page&nbsp; <span id="currentPageNum"></span>&nbsp;of&nbsp; <span id="totalPageNum"></span>
+				</span>
+			</div>
+			<canvas id="pdfCanvas">
+			</canvas>
+		</div>
+		<div class="folder" id="conceptsFolder" data-min="-1265" data-max="-80">
+			<img src="Assets/Images/Concepts_Folder_Drag.png" alt="concepts folder to drag">
+			<div id="conceptsFolderDragActivationArea"></div>
+			<div id="conceptDragArea">
+				<div class="concept" id="concept1">
+					<div id="concept1DragActivationArea"></div>
+					<h2 class="conceptTitle"></h2>
+					<p class="conceptText">Thinking... Explaination will be with you shortly</p>
+					<div class="addAnotherExplainationBtn" id="addAnotherExplaination1Btn">+</div>
+				</div>
+				<div class="concept" id="concept2">
+					<div id="concept2DragActivationArea"></div>
+					<h2 class="conceptTitle"></h2>
+					<p class="conceptText">Thinking... Explaination will be with you shortly</p>
+					<div class="addAnotherExplainationBtn" id="addAnotherExplaination2Btn">+</div>
+				</div>
+				<div class="concept" id="concept3">
+					<div id="concept3DragActivationArea"></div>
+					<h2 class="conceptTitle"></h2>
+					<p class="conceptText">Thinking... Explaination will be with you shortly</p>
+					<div class="addAnotherExplainationBtn" id="addAnotherExplaination3Btn">+</div>
+				</div>
+				<div class="concept" id="concept4">
+					<div id="concept4DragActivationArea"></div>
+					<h2 class="conceptTitle"></h2>
+					<p class="conceptText">Thinking... Explaination will be with you shortly</p>
+					<div class="addAnotherExplainationBtn" id="addAnotherExplaination4Btn">+</div>
+				</div>
+				<div class="concept" id="concept5">
+					<div id="concept5DragActivationArea"></div>
+					<h2 class="conceptTitle"></h2>
+					<p class="conceptText">Thinking... Explaination will be with you shortly</p>
+					<div class="addAnotherExplainationBtn" id="addAnotherExplaination5Btn">+</div>
+				</div>
+				<div class="concept" id="concept6">
+					<div id="concept6DragActivationArea"></div>
+					<h2 class="conceptTitle"></h2>
+					<p class="conceptText">Thinking... Explaination will be with you shortly</p>
+					<div class="addAnotherExplainationBtn" id="addAnotherExplaination6Btn">+</div>
+				</div>
+				<div class="concept" id="concept7">
+					<div id="concept7DragActivationArea"></div>
+					<h2 class="conceptTitle"></h2>
+					<p class="conceptText">Thinking... Explaination will be with you shortly</p>
+					<div class="addAnotherExplainationBtn" id="addAnotherExplaination7Btn">+</div>
+				</div>
+				<div class="concept" id="concept8">
+					<div id="concept8DragActivationArea"></div>
+					<h2 class="conceptTitle"></h2>
+					<p class="conceptText">Thinking... Explaination will be with you shortly</p>
+					<div class="addAnotherExplainationBtn" id="addAnotherExplaination8Btn">+</div>
+				</div>
+				<div class="concept" id="concept9">
+					<div id="concept9DragActivationArea"></div>
+					<h2 class="conceptTitle"></h2>
+					<p class="conceptText">Thinking... Explaination will be with you shortly</p>
+					<div class="addAnotherExplainationBtn" id="addAnotherExplaination9Btn">+</div>
+				</div>
+				<div class="concept" id="concept10">
+					<div id="concept10DragActivationArea"></div>
+					<h2 class="conceptTitle"></h2>
+					<p class="conceptText">Thinking... Explaination will be with you shortly</p>
+					<div class="addAnotherExplainationBtn" id="addAnotherExplaination10Btn">+</div>
+				</div>
+			</div>
+		</div>
+		<div id="instruments">
+			<div id="conceptActivationPanel">
+				<div id="buttonContainer">
+					<div class="conceptActivationButton" id="concept1ActivationButton"><p>1</p></div>
+					<div class="conceptActivationButton" id="concept2ActivationButton"><p>2</p></div>
+					<div class="conceptActivationButton" id="concept3ActivationButton"><p>3</p></div>
+					<div class="conceptActivationButton" id="concept4ActivationButton"><p>4</p></div>
+					<div class="conceptActivationButton" id="concept5ActivationButton"><p>5</p></div>
+					<div class="conceptActivationButton" id="concept6ActivationButton"><p>6</p></div>
+					<div class="conceptActivationButton" id="concept7ActivationButton"><p>7</p></div>
+					<div class="conceptActivationButton" id="concept8ActivationButton"><p>8</p></div>
+					<div class="conceptActivationButton" id="concept9ActivationButton"><p>9</p></div>
+					<div class="conceptActivationButton" id="concept10ActivationButton"><p>10</p></div>
+				</div>
+			</div>
+			<div id="controlPanel">
+				<div id="controlContainer">
+					<div id="lengthOfText">
+						<div id="lengthOfTextDisplay">
+							<p>30</p>
+						</div>
+						<div id="numpad">
+							<div class="numpadButton" id="numpadButton1">1</div>
+							<div class="numpadButton" id="numpadButton2">2</div>
+							<div class="numpadButton" id="numpadButton3">3</div>
+							<div class="numpadButton" id="numpadButton4">4</div>
+							<div class="numpadButton" id="numpadButton5">5</div>
+							<div class="numpadButton" id="numpadButton6">6</div>
+							<div class="numpadButton" id="numpadButton7">7</div>
+							<div class="numpadButton" id="numpadButton8">8</div>
+							<div class="numpadButton" id="numpadButton9">9</div>
+							<div class="numpadButton" id="numpadButtonBack">Back</div>
+							<div class="numpadButton" id="numpadButton0">0</div>
+							<div class="numpadButton" id="numpadButtonConfirm">Confirm</div>
+						</div>
+					</div>
+					<div id="redaction">
+						<input type="radio" id="RedactionRadioUnclassified" name="Redaction" value="UNCLASSIFIED" onclick="setToClassified(false)">
+						<label>UNCLASSIFIED</label><br>
+						<input type="radio" id="RedactionRadioClassified" name="Redaction" value="CLASSIFIED" onclick="setToClassified(true)">
+						<label>CLASSIFIED</label><br>
+					</div>
+					<div id="complexity">
+						<p>Complexity</p>
+						<input id="complexitySlider" type="range" min="1" max="100" value="50">
+					</div>
+					<div id="audience">
+						<input type="radio" id="Audience5YearOld" class="audienceRadioBtn" name="Audience" value="5 Year Old Child">
+						<label>5 Year Old Child</label><br>
+						<input type="radio" id="RandomStreetPerson" class="audienceRadioBtn" name="Audience" value="Random person from the street">
+						<label>Random Person From The Street</label><br>
+						<input type="radio" id="AudienceUniversityStudent" class="audienceRadioBtn" name="Audience" value="University Student">
+						<label>University Student</label><br>
+						<input type="radio" id="ScientistPHD" class="audienceRadioBtn" name="Audience" value="Scientist with a PHD in the field of this paper">
+						<label>PHD Scientist</label><br>
+					</div>
+					<div id="elucidation">
+						<p>Elucidation</p>
+						<div id="elucidationON">ON</div>
+						<div id="elucidationOFF">OFF</div>
+					</div>
+					<div id="form">
+						<p>Form</p>
+						<div id="formText">TEXT</div>
+						<div id="formBullet">BULLET</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://warp.cs.au.dk/libs/pdf.min.js"></script>
+		<script src="scripts/AIConceptsHandler.js"></script>
+		<script src="scripts/pdfHandler.js"></script>
+		<script src="scripts/ConceptSelectionHandler.js"></script>
+		<script src="scripts/warpmind.js"></script>
+		<script src="scripts/conceptsDrag.js"></script>
+		<script src="scripts/folderDrag.js"></script>
+	</body>
+</html>

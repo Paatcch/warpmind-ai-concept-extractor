@@ -1,0 +1,276 @@
+body{
+    margin-top: 0;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+
+/* --- PDF folder --- */
+
+#pdfFolder{
+    position: absolute;
+    left: -200px;
+    z-index: 200;
+}
+
+#pdfFolderDragActivationArea{
+    position: absolute;
+    z-index: 201;
+    padding: 110px 70px;
+    left: 1360px;
+    top: 90px;
+}
+
+#topBar{
+    position: absolute;
+    left: 1050px;
+    top: 55px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;   
+}
+
+#topBar *{
+    position: static;
+    display: flex;
+}
+
+
+#pdfCanvas{
+    position: absolute;
+    top: 100px;
+    left: 880px;
+}
+
+/* --- Concepts folder --- */
+
+#conceptsFolder{
+    position: absolute;
+    z-index: 100;
+    left: -80px;
+}
+
+.folder > img{
+    position: absolute;
+    pointer-events: none;
+}
+
+#conceptsFolderDragActivationArea{
+    position: absolute;
+    z-index: 300; /*bigger than pdfFolder, so its sprite wont block this*/
+    padding: 110px 70px;
+    left: 1360px;
+    top: 367px; 
+}
+
+#conceptDragArea{
+    position: relative;
+    background-color: rgba(239, 239, 239, 0.573);
+    left: 320px;
+    top: 100px;
+    width: 1000px;
+    height: 600px;
+}
+
+/*Drag activation area*/
+.concept > div:not(.addAnotherExplainationBtn){ 
+    z-index: 101;
+    /* background-color: rgba(135, 189, 166, 0.57); */
+    position: absolute;
+    width: 270px; 
+    height: 90px; /*Default - will be changed (javascript) by how big the title is*/
+    margin: -10px;
+    padding-top: 10px;
+}
+
+.concept{
+    position: absolute;
+    width: 250px;
+    background-color: rgb(235, 226, 163);
+    display: none;
+    top: 150px;
+    left: 370px;
+    padding-bottom: 15px; /* Space for the "+" button */
+}
+
+.conceptTitle{
+    position: absolute;
+    padding: 0px 20px 0px 20px;
+    margin-top: 15px;
+    z-index: 100;
+}
+
+.conceptText{
+    position: absolute;
+    padding: 0px 10px 0px 10px;
+}
+
+.concept h2,
+.concept p {
+    position: static;
+}
+
+.addAnotherExplainationBtn{
+    background-color: rgba(255, 251, 220, 0.311);
+    position: absolute;
+    z-index: 101;
+    right: 5px;
+    bottom: 5px;
+    width: 25px;
+    height: 20px;
+    text-align: center;
+}
+
+/* --- Instruments --- */
+
+#instruments{
+    position: absolute;
+    background-color: rgba(185, 255, 226, 0.127);
+    outline: 2px solid black;
+    z-index: 50;
+    left: 980px;
+    width: 560px;
+    height: 740px;
+}
+
+/* --- Concept Activation Panel --- */
+
+#conceptActivationPanel{
+    position: absolute;
+    background-color: rgb(184, 184, 184);
+    z-index: 0;
+    position: absolute;
+    left:45px;
+    top:30px;
+    width: 470px;
+    height: 200px;
+    justify-items:center;
+}
+
+#buttonContainer{
+    position: absolute;
+    margin-top: 20px;
+    width: 450px;
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+    gap: 10px; /* spacing between buttons */
+    justify-items: center;
+    align-items: center;
+}
+
+.conceptActivationButton{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    position: static;
+    background-color: rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Control Panel --- */
+
+#controlPanel{
+    position: absolute;
+    border: 1px solid grey;
+    z-index: 0;
+    left:20px;
+    top:250px;
+    width: 520px;
+    height: 500px;
+    justify-items:center;
+}
+
+#lengthOfTextDisplay{
+    position: absolute;
+    background-color: rgb(234, 234, 234);
+    width: 150px;
+    height: 40px;
+    left: 25px;
+    top: 190px;
+}
+
+#numpad{ /*cannot be seen for the numpad buttons*/
+    position: absolute;
+    left:10px;
+    top:240px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(4, 1fr);    /* 4 rows */
+    gap: 0;
+    justify-items: center;
+    align-items: center;
+}
+
+.numpadButton{
+    position: absolute;
+    outline: 1px solid black;
+    width: 60px;
+    height: 60px;
+    position: static;
+    background-color: rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Redaction --- */
+#redaction{
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}  
+
+/* --- Complexity --- */
+#complexity{
+    position: absolute;
+    left: 350px;
+}
+
+/* --- Audience --- */
+#audience{
+    position: absolute;
+    left: 250px;
+    top: 200px;
+}
+
+/* --- Elucidation --- */
+#elucidation{
+    position: absolute;
+    left: 200px;
+}
+
+#elucidation div{
+    padding-left: 23px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background-color: rgb(221, 221, 221);
+}
+
+/* --- Form --- */
+#form{
+    position: absolute;
+    left: 250px;
+    top: 350px;
+}
+
+#form p{
+    position: absolute;
+    left: 33px;
+    top: -40px;
+}
+
+#form div{
+    padding-left: 23px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 20px;
+    background-color: rgb(221, 221, 221);
+}
+
+
+
